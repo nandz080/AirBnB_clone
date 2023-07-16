@@ -47,3 +47,29 @@ class FileStorage:
         except FileNotFoundError:
             return
 
+        with open(FileStorage.__file_path, "r") as file:
+            content = file.read()
+            if content is None:
+                return
+            objects_dict = json.loads(content)
+            FileStorage.__objects = {}
+            for key, value in objects_dict.items():
+                if "User" in key:
+                    FileStorage.__objects[key] = User(**objects_dict[key])
+                    continue
+                elif "State" in key:
+                    FileStorage.__objects[key] = State(**objects_dict[key])
+                    continue
+                elif "City" in key:
+                    FileStorage.__objects[key] = City(**objects_dict[key])
+                    continue
+                elif "Place" in key:
+                    FileStorage.__objects[key] = Place(**objects_dict[key])
+                    continue
+                elif "Amenity" in key:
+                    FileStorage.__objects[key] = Amenity(**objects_dict[key])
+                    continue
+                elif "Review" in key:
+                    FileStorage.__objects[key] = Review(**objects_dict[key])
+                    continue
+                FileStorage.__objects[key] = BaseModel(**objects_dict[key])
