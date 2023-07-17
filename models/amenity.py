@@ -5,6 +5,9 @@ Module defining Amenity class
 """
 
 class Amenity(BaseModel):
-""" Class representing amenity that inherits from BaseModel"""
-	
-	name = ""
+        """Represent an amenity.
+    Attributes:
+        name (str): The name of the amenity.
+    """
+
+    name = ""
