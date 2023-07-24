@@ -1,28 +1,18 @@
-#!/usr/bin/python3
 """
 W3C validator for Holberton School
-
 For HTML and CSS files.
-
 Based on 1 API:
 - https://validator.w3.org/docs/api.html
-
 Usage:
-
 Simple file:
-
 ```
 ./w3c_validator.py index.html
 ```
-
 Multiple files:
-
 ```
 ./w3c_validator.py index.html header.html styles/common.css
 ```
-
 All errors are printed in `STDERR`
-
 Return:
 Exit status is the # of errors, 0 on Success
 """
