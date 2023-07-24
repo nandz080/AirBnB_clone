@@ -1,16 +1,16 @@
-header{
+header {
     color: white;
     height: 70px;
     width: 100%;
     border-bottom: 1px solid #CCCCCC;
     display: flex;
-    align-items: center;
+    align-items: left;
+    justify-content: center;
 }
 
-.icon {
-    width: 128px;
-    height: 60px;
-    padding-left: 20px;
-    background: url("../images/logo.png");
+header .logo {
+    width: 20px;
+    background-image: url("./images/logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-
